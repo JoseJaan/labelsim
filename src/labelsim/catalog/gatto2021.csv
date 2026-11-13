@@ -1,0 +1,108 @@
+nome_gatto,id,canonica,situacao,formula_gatto,nota
+ample.e,ample,ample,correta,abs(a*(c+d)/(c*(a+b))),
+anderberg.e,anderberg,anderberg,correta,(max(a;b)+max(c;d)+max(a;c)+max(b;d)-max(a+c;b+d)-max(a+b;c+d))/(2*n),
+baroni.urbani.buser.e.1,baroni_urbani_buser_1,baroni_urbani_buser_1,correta,(sqrt(abs(a*d))+a)/(sqrt(abs(a*d))+a+b+c),
+baroni.urbani.buser.e.2,baroni_urbani_buser_2,baroni_urbani_buser_2,correta,(a-b-c+sqrt(abs(a*d)))/(a+b+c+sqrt(abs(a*d))),
+braun.blanquet.e,braun_blanquet,braun_blanquet,correta,a/max(a+b;a+c),
+bray.curtis.e,bray_curtis,bray_curtis,correta,(b+c)/(2*a+b+c),
+canberra.e,canberra,hamming,correta,(b+c)^(2/2),
+chord.e,chord,chord,correta,sqrt(abs(2*(1-a/sqrt(abs((a+b)*(a+c)))))),
+cityblock.e,cityblock,hamming,correta,b+c,
+clement.e,clement,,fonte_pendente,a*(c+d)/(a+b)+d*(a+b)/(c+d),Fórmula ausente de Choi (2010) e Kim (2022).
+cohen.e,cohen,,fonte_pendente,2*(a*d-b*c)/((a+b)*(b+d)+(a+c)*(c+d)),Fórmula ausente de Choi (2010) e Kim (2022).
+cole.e.1,cole_1,cole,formula_divergente,sqrt(abs((a*d-b*c)^2-(a+b)*(a+c)*(b+d)*(c+d))),"Calcula o numerador sqrt(2)*(a*d-b*c) e não o usa; devolve só a raiz do denominador, com valor absoluto."
+cole.e.2,cole_2,,fonte_pendente,(a*d-b*c)/((a+b)*(b+d)),Fórmula ausente de Choi (2010) e Kim (2022).
+cole.e.3,cole_3,,fonte_pendente,(a*d-b*c)/((a+c)*(c+d)),Fórmula ausente de Choi (2010) e Kim (2022).
+cosine.e,cosine,cosine,correta,a/sqrt(abs((a+b)*(a+c)))^2,
+czekanowski.e,czekanowski,dice,correta,2*a/(2*a+b+c),
+dennis.e,dennis,dennis,correta,(a*d-b*c)/sqrt(abs(n*(a+b)*(a+c))),
+dibby.e,dibby,,fonte_pendente,((a*d)^(3/4)-(b*c)^(3/4))/((a*d)^(3/4)-(b*c)^(3/4)),"Fórmula ausente de Choi (2010) e Kim (2022). Numerador e denominador são a mesma expressão, então vale 1, ou NaN quando a expressão é zero. O nome no código original está grafado dibby; a versão em lista se chama digby.e.1."
+dice.e.1,dice_1,dice,correta,2*a/(2*a+b+c),
+dice.e.2,dice_2,,fonte_pendente,a/a+b,"Fórmula ausente de Choi (2010) e Kim (2022). Pela precedência do R, a/a+b vale 1+b."
+dice.e.3,dice_3,,fonte_pendente,a/a+c,"Fórmula ausente de Choi (2010) e Kim (2022). Pela precedência do R, a/a+c vale 1+c."
+disperson.e,disperson,disperson,termo_trocado,((a+d)-(b+c))/(a+b+c+d)^2,O numerador usa (a+d)-(b+c) no lugar de ad-bc.
+doolittle.e,doolittle,,fonte_pendente,(a*d-b*c)^2/((a+b)*(a+c)*(c+d)*(b+d)),Fórmula ausente de Choi (2010) e Kim (2022).
+driver.kroeber.e.1,driver_kroeber_1,kulczynski_2,correta,(a/2)*(1/(a+b)+1/(a+c)),
+driver.kroeber.e.2,driver_kroeber_2,,fonte_pendente,a/sqrt(abs((a+b)*(a+c))),"A expressão é a de Ochiai I, mas nenhuma fonte disponível atribui essa forma a Driver e Kroeber."
+euclidean.e,euclidean,euclidean,formula_divergente,b+c,Falta a raiz quadrada de sqrt(b+c).
+eyraud.e,eyraud,eyraud,correta,n^2*(n*a-(a+b)*(a+c))/((a+b)*(a+c)*(b+d)*(c+d)),
+fager.mcgowan.e.1,fager_mcgowan_1,fager_mcgowan_1,correta,a/sqrt(abs((a+b)*(a+c)))-max(a+b;a+c)/2,
+fager.mcgowan.e.2,fager_mcgowan_2,fager_mcgowan_2,correta,a/sqrt(abs((a+b)*(a+c)))-1/(2*sqrt(abs(max(a+b;a+c)))),
+faith.e,faith,faith,correta,(a+0.5*d)/(a+b+c+d),
+fleiss.e,fleiss,,fonte_pendente,((a*d-b*c)*((a+b)*(b+d))+((a+c)*(c+d)))/(2*(a+b)*(a+c)*(c+d)*(b+d)),Fórmula ausente de Choi (2010) e Kim (2022).
+forbes.e.1,forbes_1,forbes_1,erro_precedencia,(n*a)/(a+b)*(a+c),"Pela precedência do R, multiplica por (a+c) em vez de dividir."
+forbes.e.2,forbes_2,forbes_2,erro_precedencia,(n*a-(a+b)*(a+c))/(n*(min(a+b;a+c)-(a+b)*(a+c))),O parêntese multiplica n também pelo produto das marginais no denominador.
+forbesi.e,forbesi,forbes_1,correta,(n*a)/((a+b)*(a+c)),
+fossum.e,fossum,fossum,erro_precedencia,(n*(a-0.5)^2)/(a+b)*(a+c),"Pela precedência do R, multiplica por (a+c) em vez de dividir."
+gilbert.well.e,gilbert_well,gilbert_wells,correta,log(a)-log(n)-log((a+b)/n)-log((a+c)/n),
+goodman.kruskal.e.1,goodman_kruskal_1,goodman_kruskal,termo_trocado,"(s-s')/(2*n-s'), s = max(a;b)+max(c;d)+max(a;c)+max(b;c), s' = max(a+c;b+d)+max(a+b;c+d)",O último termo de s usa max(b;c) no lugar de max(b;d).
+goodman.kruskal.e.2,goodman_kruskal_2,,fonte_pendente,(2*min(a;d)-b-c)/(2*min(a;d)+b+c),Fórmula ausente de Choi (2010) e Kim (2022).
+gower.e,gower,gower,correta,(a+d)/sqrt(abs((a+b)*(a+c)*(b+d)*(c+d))),
+gower.legendre.e,gower_legendre,gower_legendre,correta,(a+d)/(a+0.5*(b+c)+d),
+hamann.e.1,hamann_1,hamann,correta,((a+d)-(b+c))/(a+b+c+d),
+hamann.e.2,hamann_2,hamann,correta,(a-b-c+d)/(a+b+c+d),
+hamming.e,hamming,hamming,correta,b+c,
+harris.e,harris,,fonte_pendente,(a*(c+d)+(b+d))/(2*(a+b+c))+(d*(a+b)+(a+c))/(2*(b+c+d)),Fórmula ausente de Choi (2010) e Kim (2022).
+hawkins.dotson.e,hawkins_dotson,,fonte_pendente,(1/2)*((a/a+b+c)+(d/b+c+d)),"Fórmula ausente de Choi (2010) e Kim (2022). Pela precedência do R, a/a+b+c vale 1+b+c e d/b+c+d vale d/b+c+d."
+hellinger.e,hellinger,hellinger,correta,2*sqrt(abs(1-a/sqrt(abs((a+b)*(a+c))))),
+inner.product.e,inner_product,inner_product,correta,a+d,
+intersection.e,intersection,intersection,correta,a,
+jaccard.e,jaccard,jaccard,correta,a/(a+b+c),
+jonhson.e,jonhson,johnson,correta,a/(a+b)+a/(a+c),O nome no código original está grafado jonhson.
+kent.foster.e.1,kent_foster_1,,fonte_pendente,-(b*c)/(b*(a+b)+c*(a+c)+b*c),Fórmula ausente de Choi (2010) e Kim (2022).
+kent.foster.e.2,kent_foster_2,,fonte_pendente,-(b*c)/(b*(c+d)+c*(b+d)+b*c),Fórmula ausente de Choi (2010) e Kim (2022).
+kuder.richardson.e,kuder_richardson,,fonte_pendente,4*(a*d-b*c)/((a+b)*(c+d)+(a+c)*(b+d)+2*(a*d-b*c)),Fórmula ausente de Choi (2010) e Kim (2022).
+kulczynski.e.1,kulczynski_1,kulczynski_1,correta,a/(b+c),
+kulczynski.e.2,kulczynski_2,kulczynski_2,correta,(a/2)*(2*a+b+c)/((a+b)*(a+c)),
+kulczynski.e.3,kulczynski_3,kulczynski_2,erro_precedencia,(1/2)*((a/a+b)+(a/a+c)),"Pela precedência do R, a/a+b vale 1+b. A forma pretendida, (1/2)(a/(a+b)+a/(a+c)), é a eq. 42 de Choi (2010)."
+kulczynski.e.4,kulczynski_4,kulczynski_1,erro_precedencia,a/b+c,"Pela precedência do R, a/b+c soma c a a/b. A forma pretendida, a/(b+c), é a eq. 64 de Choi (2010)."
+lance.williams.e,lance_williams,bray_curtis,correta,(b+c)/(2*a+b+c),
+loevinger.e,loevinger,,fonte_pendente,(a*d-b*c)/min((a+b)*(b+d);(a+c)*(c+d)),Fórmula ausente de Choi (2010) e Kim (2022).
+manhattan.e,manhattan,hamming,correta,b+c,
+maxwell.pilliner.e,maxwell_pilliner,,fonte_pendente,2*(a*d-b*c)/((a+b)*(c+d)+(c+d)*(b+d)),Fórmula ausente de Choi (2010) e Kim (2022).
+mcconnaughey.e,mcconnaughey,mcconnaughey,erro_precedencia,(a^2-(b-c))/(a+b)*(a+c),"Pela precedência do R, multiplica por (a+c) em vez de dividir; o numerador usa b-c no lugar de bc."
+mean.manhattan.e,mean_manhattan,mean_manhattan,correta,(b+c)/(a+b+c+d),
+michael.e,michael,michael,erro_precedencia,4*(a*d-b*c)/((a+d)^2)+((b+c)^2),"Pela precedência do R, (b+c)^2 é somado ao quociente em vez de entrar no denominador."
+minowski.e,minowski,hamming,correta,(b+c)^(1/1),O nome no código original está grafado minowski.
+mountford.e.1,mountford_1,mountford,erro_precedencia,a/(0.5*((a*b+a*c)+b*c)),O parêntese multiplica bc por 0.5.
+mountford.e.2,mountford_2,mountford,termo_trocado,2*a/(a*(a+c)+2*b*c),O denominador usa a(a+c) no lugar de a(b+c).
+nei.li.e,nei_li,dice,correta,2*a/((a+b)+(a+c)),
+ochiai.e.1,ochiai_1,ochiai_1,correta,a/sqrt(abs((a+b)*(a+c))),
+ochiai.e.2,ochiai_2,ochiai_2,termo_trocado,a*d/sqrt(abs((a+d)*(a+c)*(d+b)*(d+c))),O denominador usa (a+d) no lugar de (a+b).
+ochiai.e.3,ochiai_3,ochiai_2,correta,a*d/sqrt(abs((a+b)*(a+c)*(b+d)*(c+d))),
+otsuka.e,otsuka,ochiai_1,correta,a/((a+b)*(a+c))^0.5,
+pattern.difference.e,pattern_difference,pattern_difference,correta,4*b*c/(a+b+c+d)^2,
+pearson.e.1,pearson_1,pearson_1,correta,n*(a*d-b*c)^2/((a+b)*(a+c)*(c+d)*(b+d)),
+pearson.e.2,pearson_2,pearson_2,erro_precedencia,(chi2/n+chi2)^(1/2),"Pela precedência do R, chi2/n+chi2 soma chi2 a chi2/n em vez de dividir por n+chi2."
+pearson.e.3,pearson_3,pearson_3,erro_precedencia,(rho/b+rho)^(1/2) com rho = (a*d-b*c)/sqrt(abs((a+b)*(a+c)*(b+c)*(c+d))),"Pela precedência do R, rho/b+rho soma rho a rho/b; além disso, divide por b no lugar de n, e rho usa (b+c) no lugar de (b+d)."
+pearson.heron.e.1,pearson_heron_1,phi,formula_divergente,(a*d-b*c)/((a+b)*(a+c)*(b+d)*(c+d)),Calcula a raiz do produto das marginais e não a usa; divide pelo produto sem raiz.
+pearson.heron.e.2,pearson_heron_2,pearson_heron_2,correta,cos(pi*sqrt(abs(b*c))/(sqrt(abs(a*d))+sqrt(abs(b*c)))),
+peirce.e.1,peirce_1,peirce,correta,(a*b+b*c)/(a*b+2*b*c+c*d),
+peirce.e.2,peirce_2,,fonte_pendente,(a*d-b*c)/((a+b)*(c+d)),Fórmula ausente de Choi (2010) e Kim (2022).
+peirce.e.3,peirce_3,,fonte_pendente,(a*d-b*c)/((a+c)*(b+d)),Fórmula ausente de Choi (2010) e Kim (2022).
+rogers.tanimoto.e,rogers_tanimoto,rogers_tanimoto,correta,(a+d)/(a+2*(b+c)+d),
+rogot.goldberd.e,rogot_goldberd,,fonte_pendente,(a/(a+b)+(a+c))+(d/(c+d)+(b+d)),"Fórmula ausente de Choi (2010) e Kim (2022). Pela precedência do R, (a+c) e (b+d) são somados em vez de entrar nos denominadores."
+russel.rao.e,russel_rao,russell_rao,correta,a/(a+b+c+d),
+scott.e,scott,,fonte_pendente,(4*a*d-(b+c)^2)/(((a+b)+(a+c))*((c+d)+(b+d))),Fórmula ausente de Choi (2010) e Kim (2022).
+shape.difference.e,shape_difference,shape_difference,correta,(n*(b+c)-(b-c)^2)/(a+b+c+d)^2,
+simpson.e,simpson,simpson,correta,a/min(a+b;a+c),
+size.difference.e,size_difference,size_difference,correta,(b+c)^2/(a+b+c+d)^2,
+sokal.michener.e,sokal_michener,sokal_michener,correta,(a+d)/(a+b+c+d),
+sokal.sneath.e.1,sokal_sneath_1,sokal_sneath_1,correta,a/(a+2*b+2*c),
+sokal.sneath.e.2,sokal_sneath_2,sokal_sneath_2,correta,2*(a+d)/(2*a+b+c+2*d),
+sokal.sneath.e.3,sokal_sneath_3,sokal_sneath_3,correta,(a+d)/(b+c),
+sokal.sneath.e.4a,sokal_sneath_4a,,fonte_pendente,(1/4)/((a/a+b)*(a/a+c)*(a/c+d)*(a/b+d)),"Corresponde à Sokal e Sneath IV, mas a eq. 49 de Choi (2010) repete o termo d/(b+d), e a fonte original não foi consultada. Pela precedência do R, a/a+b vale 1+b."
+sokal.sneath.e.4b,sokal_sneath_4b,,fonte_pendente,(a/a+b)*(a/a+c)*(d/b+c)*(d/b+d),"Corresponde à Sokal e Sneath IV, mas a eq. 49 de Choi (2010) repete o termo d/(b+d), e a fonte original não foi consultada. Pela precedência do R, a/a+b vale 1+b."
+sokal.sneath.e.5a,sokal_sneath_5a,ochiai_2,termo_trocado,a*d/((a+d)*(a+c)*(b+d)*(c+d))^0.5,O denominador usa (a+d) no lugar de (a+b).
+sokal.sneath.e.5b,sokal_sneath_5b,ochiai_2,termo_trocado,a*d/sqrt(abs((a+d)*(a+c)*(b+d)*(c+d))),O denominador usa (a+d) no lugar de (a+b).
+sorgenfrei.e,sorgenfrei,sorgenfrei,termo_trocado,a^2/((a+b)*(a+b)),O denominador usa (a+b)(a+b) no lugar de (a+b)(a+c).
+square.euclidean.e,square_euclidean,hamming,correta,sqrt(abs((b+c)^2)),
+stiles.e,stiles,stiles,termo_trocado,log10(n*abs(a*d-n/2)^2/((a+b)*(a+c)*(b+d)*(c+d))),O numerador usa |ad-n/2| no lugar de |ad-bc|-n/2.
+tanimoto.e,tanimoto,jaccard,correta,a/((a+b)+(a+c)-a),
+tarantula.e,tarantula,tarantula,termo_trocado,a*(c+d)/(c*(a+d)),O denominador usa c(a+d) no lugar de c(a+b).
+tarwid.e,tarwid,tarwid,correta,(n*a-(a+b)*(a+c))/(n*a+(a+b)*(a+c)),
+three.w.jaccard.e,three_w_jaccard,jaccard_3w,correta,3*a/(3*a+b+c),
+vari.e,vari,vari,correta,(b+c)/(4*(a+b+c+d)),
+yule.e.1,yule_1,yule_q,constante,(a*d-b*c)/(a*d-b*c),"Numerador e denominador são a mesma expressão, então vale 1, ou NaN quando ad = bc. A forma pretendida é a eq. 61 de Choi (2010)."
+yule.e.2,yule_2,yule_q_distance,correta,2*b*c/(a*d+b*c),
+yule.e.3,yule_3,yule_w,constante,(sqrt(abs(a*d))-sqrt(abs(b*c)))/(sqrt(abs(a*d))-sqrt(abs(b*c))),"Numerador e denominador são a mesma expressão, então vale 1, ou NaN quando ad = bc. A forma pretendida é a eq. 63 de Choi (2010)."

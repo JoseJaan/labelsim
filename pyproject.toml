@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "labelsim"
+version = "0.1.0"
+description = "Medidas de similaridade entre rótulos binários de dados multirrótulo, a partir da tabela de contingência"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "José Acerbi Almeida Neto" }]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.22", "scipy>=1.8"]
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.optional-dependencies]
+pandas = ["pandas>=1.4"]
+sklearn = ["scikit-learn>=1.1"]
+dev = ["pandas>=1.4", "scikit-learn>=1.1", "pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+labelsim = ["catalog/*.csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

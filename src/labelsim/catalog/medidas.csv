@@ -1,0 +1,66 @@
+id,nome,tipo,formula,referencia,aliases,nota
+jaccard,Jaccard,similaridade,a/(a+b+c),"Choi2010, eq. 1 e eq. 65",,"A eq. 65 (Tanimoto), a/((a+b)+(a+c)-a), é a mesma fórmula."
+dice,Dice,similaridade,2a/(2a+b+c),"Choi2010, eq. 2, eq. 3 e eq. 5",,"Czekanowski (eq. 3) e Nei e Li (eq. 5) têm a mesma fórmula."
+jaccard_3w,Jaccard com peso 3,similaridade,3a/(3a+b+c),"Choi2010, eq. 4",,
+sokal_sneath_1,Sokal e Sneath I,similaridade,a/(a+2b+2c),"Choi2010, eq. 6",,
+sokal_michener,Sokal e Michener,similaridade,(a+d)/(a+b+c+d),"Choi2010, eq. 7",,
+sokal_sneath_2,Sokal e Sneath II,similaridade,2(a+d)/(2a+b+c+2d),"Choi2010, eq. 8",,
+rogers_tanimoto,Rogers e Tanimoto,similaridade,(a+d)/(a+2(b+c)+d),"Choi2010, eq. 9",,
+faith,Faith,similaridade,(a+0.5d)/(a+b+c+d),"Choi2010, eq. 10",,
+gower_legendre,Gower e Legendre,similaridade,(a+d)/(a+0.5(b+c)+d),"Choi2010, eq. 11",,
+intersection,Interseção,similaridade,a,"Choi2010, eq. 12",,
+inner_product,Produto interno,similaridade,a+d,"Choi2010, eq. 13",,
+russell_rao,Russell e Rao,similaridade,a/(a+b+c+d),"Choi2010, eq. 14",russel_rao,
+hamming,Hamming,distancia,b+c,"Choi2010, eq. 15, eq. 17, eq. 18, eq. 19, eq. 21 e eq. 22",minkowski;squared_euclidean,"Quadrado euclidiano (eq. 17, raiz de (b+c)^2), Canberra (eq. 18, (b+c)^(2/2)), Manhattan (eq. 19), quarteirão (eq. 21) e Minkowski (eq. 22, (b+c)^(1/1)) valem b+c."
+euclidean,Euclidiana,distancia,sqrt(b+c),"Choi2010, eq. 16",,
+mean_manhattan,Manhattan média,distancia,(b+c)/(a+b+c+d),"Choi2010, eq. 20",,
+vari,Vari,distancia,(b+c)/(4(a+b+c+d)),"Choi2010, eq. 23",,
+size_difference,Diferença de tamanho,distancia,(b+c)^2/(a+b+c+d)^2,"Choi2010, eq. 24",,
+shape_difference,Diferença de forma,distancia,(n(b+c)-(b-c)^2)/(a+b+c+d)^2,"Choi2010, eq. 25",,
+pattern_difference,Diferença de padrão,distancia,4bc/(a+b+c+d)^2,"Choi2010, eq. 26",,
+bray_curtis,Bray e Curtis,distancia,(b+c)/(2a+b+c),"Choi2010, eq. 27 e eq. 28",,"Lance e Williams (eq. 27) tem a mesma fórmula."
+hellinger,Hellinger,distancia,2 sqrt(1-a/sqrt((a+b)(a+c))),"Choi2010, eq. 29",,
+chord,Corda,distancia,sqrt(2(1-a/sqrt((a+b)(a+c)))),"Choi2010, eq. 30",,
+cosine,Cosseno,similaridade,a/(sqrt((a+b)(a+c)))^2,"Choi2010, eq. 31",,"Como impressa na fonte, a raiz é elevada ao quadrado, o que dá a/((a+b)(a+c))."
+gilbert_wells,Gilbert e Wells,similaridade,log(a)-log(n)-log((a+b)/n)-log((a+c)/n),"Choi2010, eq. 32",,"A fonte não indica a base do logaritmo; usa-se o natural, como em Gatto (2021)."
+ochiai_1,Ochiai I,similaridade,a/sqrt((a+b)(a+c)),"Choi2010, eq. 33 e eq. 38",ochiai,"Otsuka (eq. 38), a/((a+b)(a+c))^0.5, é a mesma fórmula."
+forbes_1,Forbes I,similaridade,na/((a+b)(a+c)),"Choi2010, eq. 34",,
+fossum,Fossum,similaridade,n(a-0.5)^2/((a+b)(a+c)),"Choi2010, eq. 35",,
+sorgenfrei,Sorgenfrei,similaridade,a^2/((a+b)(a+c)),"Choi2010, eq. 36",,
+mountford,Mountford,similaridade,a/(0.5(ab+ac)+bc),"Choi2010, eq. 37; Kim2022, tab. 4",,"Kim (2022) escreve a forma equivalente 2a/(a(b+c)+2bc), com outra notação."
+mcconnaughey,McConnaughey,similaridade,(a^2-bc)/((a+b)(a+c)),"Choi2010, eq. 39",,
+tarwid,Tarwid,similaridade,(na-(a+b)(a+c))/(na+(a+b)(a+c)),"Choi2010, eq. 40",,
+kulczynski_2,Kulczynski II,similaridade,(a/2)(2a+b+c)/((a+b)(a+c)),"Choi2010, eq. 41 e eq. 42",kulczynski2;driver_kroeber,"Driver e Kroeber (eq. 42), (a/2)(1/(a+b)+1/(a+c)), é a mesma fórmula."
+johnson,Johnson,similaridade,a/(a+b)+a/(a+c),"Choi2010, eq. 43",,
+dennis,Dennis,similaridade,(ad-bc)/sqrt(n(a+b)(a+c)),"Choi2010, eq. 44",,
+simpson,Simpson,similaridade,"a/min(a+b,a+c)","Choi2010, eq. 45",,
+braun_blanquet,Braun-Blanquet,similaridade,"a/max(a+b,a+c)","Choi2010, eq. 46",,
+fager_mcgowan_1,Fager e McGowan I,similaridade,"a/sqrt((a+b)(a+c))-max(a+b,a+c)/2","Choi2010, eq. 47",,"Fórmula como impressa em Choi (2010). Kim (2022) dá outra forma, implementada em fager_mcgowan_2."
+fager_mcgowan_2,Fager e McGowan II,similaridade,"a/sqrt((a+b)(a+c))-1/(2 sqrt(max(a+b,a+c)))","Kim2022, tab. 4",,"Kim (2022) usa outra notação, com c para as coocorrências."
+forbes_2,Forbes II,similaridade,"(na-(a+b)(a+c))/(n min(a+b,a+c)-(a+b)(a+c))","Choi2010, eq. 48",,
+gower,Gower,similaridade,(a+d)/sqrt((a+b)(a+c)(b+d)(c+d)),"Choi2010, eq. 50",,
+pearson_1,Pearson I,similaridade,n(ad-bc)^2/((a+b)(a+c)(c+d)(b+d)),"Choi2010, eq. 51",,"É a estatística qui-quadrado da tabela 2x2."
+pearson_2,Pearson II,similaridade,(chi2/(n+chi2))^(1/2),"Choi2010, eq. 52",,"chi2 é o valor de pearson_1."
+pearson_3,Pearson III,similaridade,(rho/(n+rho))^(1/2),"Choi2010, eq. 53",,"rho é o valor de phi; fica indefinida quando rho é negativo."
+phi,Phi (Pearson e Heron I),similaridade,(ad-bc)/sqrt((a+b)(a+c)(b+d)(c+d)),"Choi2010, eq. 54",pearson_heron_1,
+pearson_heron_2,Pearson e Heron II,similaridade,cos(pi sqrt(bc)/(sqrt(ad)+sqrt(bc))),"Choi2010, eq. 55",,
+sokal_sneath_3,Sokal e Sneath III,similaridade,(a+d)/(b+c),"Choi2010, eq. 56",,
+ochiai_2,Ochiai II,similaridade,ad/sqrt((a+b)(a+c)(b+d)(c+d)),"Choi2010, eq. 57 e eq. 60",sokal_sneath_v;sokal_sneath_5,"Sokal e Sneath V (eq. 57) é a mesma fórmula."
+cole,Cole,similaridade,sqrt(2)(ad-bc)/sqrt((ad-bc)^2-(a+b)(a+c)(b+d)(c+d)),"Choi2010, eq. 58",,"Como impressa na fonte, o radicando do denominador é negativo sempre que (ad-bc)^2 for menor que o produto das marginais, e a medida fica indefinida."
+stiles,Stiles,similaridade,log10(n(|ad-bc|-n/2)^2/((a+b)(a+c)(b+d)(c+d))),"Choi2010, eq. 59",,
+yule_q,Q de Yule,similaridade,(ad-bc)/(ad+bc),"Choi2010, eq. 61",,
+yule_q_distance,Distância Q de Yule,distancia,2bc/(ad+bc),"Choi2010, eq. 62",,
+yule_w,W de Yule,similaridade,(sqrt(ad)-sqrt(bc))/(sqrt(ad)+sqrt(bc)),"Choi2010, eq. 63",,
+kulczynski_1,Kulczynski I,similaridade,a/(b+c),"Choi2010, eq. 64",,
+disperson,Disperson,similaridade,(ad-bc)/(a+b+c+d)^2,"Choi2010, eq. 66",,
+hamann,Hamann,similaridade,((a+d)-(b+c))/(a+b+c+d),"Choi2010, eq. 67",,
+michael,Michael,similaridade,4(ad-bc)/((a+d)^2+(b+c)^2),"Choi2010, eq. 68",,
+goodman_kruskal,Goodman e Kruskal,similaridade,"(s-s')/(2n-s'), s = max(a,b)+max(c,d)+max(a,c)+max(b,d), s' = max(a+c,b+d)+max(a+b,c+d)","Choi2010, eq. 69",,
+anderberg,Anderberg,similaridade,"(s-s')/(2n), com s e s' como em goodman_kruskal","Choi2010, eq. 70",,
+baroni_urbani_buser_1,Baroni-Urbani e Buser I,similaridade,(sqrt(ad)+a)/(sqrt(ad)+a+b+c),"Choi2010, eq. 71",,
+baroni_urbani_buser_2,Baroni-Urbani e Buser II,similaridade,(sqrt(ad)+a-(b+c))/(sqrt(ad)+a+b+c),"Choi2010, eq. 72",,
+peirce,Peirce,similaridade,(ab+bc)/(ab+2bc+cd),"Choi2010, eq. 73",,
+eyraud,Eyraud,similaridade,n^2(na-(a+b)(a+c))/((a+b)(a+c)(b+d)(c+d)),"Choi2010, eq. 74",,
+tarantula,Tarantula,similaridade,a(c+d)/(c(a+b)),"Choi2010, eq. 75",,
+ample,AMPLE,similaridade,|a(c+d)/(c(a+b))|,"Choi2010, eq. 76",,
+nmi,Informação mútua normalizada,similaridade,I(i;j)/sqrt(H(i)H(j)),Strehl2002,,"Logaritmo de base 2, com 0 log 0 = 0. Fica indefinida quando um dos rótulos é constante."
